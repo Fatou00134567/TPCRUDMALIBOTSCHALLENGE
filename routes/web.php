@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('/categorie')->group(function () {
     Route::get('', [CategorieController::class, 'index']);
+    Route::get('/create', [CategorieController::class, 'create'])->name('create-categorie');
+    Route::post('/store', [CategorieController::class, 'store'])->name('store-categorie');
 })->name('categorie');
 
 Route::prefix('/post')->group(function () {

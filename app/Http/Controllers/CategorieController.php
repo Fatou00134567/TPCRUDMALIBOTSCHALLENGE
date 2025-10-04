@@ -8,4 +8,8 @@ class CategorieController extends Controller
     public function index(){
     return view('categorie-index'); // Assure que le nom de la vue correspond au fichier dans resources/views
     }
+
+    public function create(){
+    return view('categorie.categorie-create');
+    }
 }
